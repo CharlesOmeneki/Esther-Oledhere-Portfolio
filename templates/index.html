@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-  <title>Bluewave Dev Hub</title>
+  <title>Dev Portfolio</title>
   <style>
     :root {
       --primary: #1B1F3B;
@@ -105,12 +105,14 @@
       margin-bottom: 1rem;
     }
 
-    .profile-photo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+     .profile-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;  /* 👈 moves image down a bit */
+}
+ 
 
     .hero h1 {
       font-size: 2.6rem;
@@ -254,7 +256,7 @@
 <body>
   <header>
     <nav class="nav">
-      <div class="logo">Bluewave Dev Hub</div>
+      <div class="logo">Dev Portfolio</div>
       <button class="nav-toggle" aria-label="toggle menu">☰</button>
       <ul class="nav-menu">
         <li><a href="#skills">Skills</a></li>
@@ -265,7 +267,8 @@
 
     <div class="hero">
       <div class="profile-wrapper">
-        <img class="profile-photo" src="{{ url_for('static', filename='images/charles2.jpg') }}" alt="Charles Image">
+         <img class="profile-photo" src="static/images/esther.jpg" alt="Charles Image">
+
       </div>
       <h1>Website Developer</h1>
       <p>Crafting innovative web & mobile experiences that elevate your brand and drive results.</p>
@@ -319,16 +322,31 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <h2>Let’s Work Together</h2>
-    <p>Have a project in mind? Reach out and let’s bring it to life!</p>
-    <a href="https://wa.me/2348173469993" class="btn btn-primary">WhatsApp</a>
-    <a href="mailto:charles4python@gmail.com" class="btn btn-primary">Email Me</a>
-  </section>
+<section id="contact" class="section contact">
+  <h2>Let’s Work Together</h2>
+  <p>Have a project in mind? Reach out and let’s bring it to life!</p>
 
-  <footer class="footer">
-    <p>© 2025 Bluewave Dev Hub. Crafted with passion and code.</p>
-  </footer>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/2348110034706" class="btn btn-primary">WhatsApp</a>
+
+  <!-- Email Button -->
+  <a href="mailto:esther.rabor27@gmail.com" class="btn btn-primary">Email Me</a>
+
+  <!-- Fallback Gmail Link -->
+  <p style="margin-top: 10px; color: #fff;">
+    Having issues with your email app?
+    <a href="https://mail.google.com/mail/?view=cm&to=esther.rabor27@gmail.com"
+       target="_blank"
+       style="color: #ffd700; text-decoration: underline;">
+      Click here to send via Gmail.
+    </a>
+  </p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 Bluewave Dev Hub. Crafted with passion and code.</p>
+</footer>
 
   <script>
     const toggleBtn = document.querySelector('.nav-toggle');
